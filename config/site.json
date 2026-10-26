@@ -1,0 +1,396 @@
+{
+  "site": {
+    "name": "IDSFC 2026",
+    "title": "IDSFC 2026 — The 13th International Design Study Forum Conference and International Integrated Design Workshop",
+    "description": "Design Beyond Borders — The 13th International Design Study Forum Conference and International Integrated Design Workshop, hosted by National Yunlin University of Science and Technology.",
+    "defaultLanguage": "en",
+    "languages": [
+      "en",
+      "zh-TW"
+    ],
+    "logo": "assets/logos/idsfc-logo.svg",
+    "heroImage": "assets/images/hero-placeholder.svg",
+    "contactEmail": "idsfc2026@gmail.com",
+    "contactPhone": "+886-5-534-2601 ext. 6041",
+    "organizer": "Graduate School of Design, National Yunlin University of Science and Technology",
+    "copyright": "IDSFC 2026 · National Yunlin University of Science and Technology"
+  },
+  "navigation": [
+    {
+      "id": "about",
+      "label": {
+        "en": "About",
+        "zh-TW": "關於大會"
+      },
+      "href": "#about"
+    },
+    {
+      "id": "themes",
+      "label": {
+        "en": "Themes",
+        "zh-TW": "徵稿主題"
+      },
+      "href": "#themes"
+    },
+    {
+      "id": "dates",
+      "label": {
+        "en": "Important Dates",
+        "zh-TW": "重要時程"
+      },
+      "href": "#dates"
+    },
+    {
+      "id": "submission",
+      "label": {
+        "en": "Submission",
+        "zh-TW": "投稿資訊"
+      },
+      "href": "#submission"
+    },
+    {
+      "id": "workshop",
+      "label": {
+        "en": "Workshop",
+        "zh-TW": "設計工作營"
+      },
+      "href": "#workshop"
+    },
+    {
+      "id": "contact",
+      "label": {
+        "en": "Contact",
+        "zh-TW": "聯絡資訊"
+      },
+      "href": "#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": {
+      "en": "THE 13TH INTERNATIONAL DESIGN STUDY FORUM",
+      "zh-TW": "第十三屆國際設計研究論壇暨研討會"
+    },
+    "title": {
+      "en": "Design Beyond Borders",
+      "zh-TW": "設計跨域"
+    },
+    "subtitle": {
+      "en": "Conference & International Integrated Design Workshop · July 3–5, 2026",
+      "zh-TW": "國際設計研究論壇暨國際整合設計工作營 · 2026 年 7 月 3–5 日"
+    },
+    "body": {
+      "en": "A platform for design research, interdisciplinary collaboration, and cross-cultural exchange.",
+      "zh-TW": "以設計研究、跨領域合作與跨文化交流為核心的國際平台。"
+    },
+    "primaryButton": {
+      "label": {
+        "en": "Submission information",
+        "zh-TW": "投稿資訊"
+      },
+      "href": "#submission"
+    },
+    "secondaryButton": {
+      "label": {
+        "en": "View important dates",
+        "zh-TW": "查看重要時程"
+      },
+      "href": "#dates"
+    }
+  },
+  "sections": {
+    "about": {
+      "title": {
+        "en": "About IDSFC 2026",
+        "zh-TW": "關於 IDSFC 2026"
+      },
+      "lead": {
+        "en": "Design Beyond Borders",
+        "zh-TW": "設計跨域"
+      },
+      "paragraphs": [
+        {
+          "en": "The Graduate School of Design at the College of Design, National Yunlin University of Science and Technology, hosts the 13th International Design Study Forum Conference and International Integrated Design Workshop. The event brings together design researchers, creators, practitioners, and students to explore how design can respond to changing social, cultural, technological, and environmental contexts.",
+          "zh-TW": "國立雲林科技大學設計學院設計學研究所舉辦第十三屆國際設計研究論壇暨研討會與國際整合設計工作營，邀集設計研究者、創作者、實務工作者及學生，共同探索設計如何回應社會、文化、科技與環境的變化。"
+        },
+        {
+          "en": "The official conference language is English. Accepted contributions are presented orally or as posters. The proceedings are planned for ISBN registration and inclusion in the Airiti Online Library.",
+          "zh-TW": "會議官方語言為英文，錄取論文採口頭發表或海報展示。大會規劃出版論文集、申請 ISBN，並納入華藝線上圖書館。"
+        }
+      ],
+      "facts": [
+        {
+          "label": {
+            "en": "Conference",
+            "zh-TW": "研討會"
+          },
+          "value": {
+            "en": "July 3–4, 2026",
+            "zh-TW": "2026 年 7 月 3–4 日"
+          }
+        },
+        {
+          "label": {
+            "en": "Workshop",
+            "zh-TW": "工作營"
+          },
+          "value": {
+            "en": "July 3–5, 2026",
+            "zh-TW": "2026 年 7 月 3–5 日"
+          }
+        },
+        {
+          "label": {
+            "en": "Venue",
+            "zh-TW": "地點"
+          },
+          "value": {
+            "en": "Design Building I & II, YunTech",
+            "zh-TW": "雲林科技大學設計一館與設計二館"
+          }
+        },
+        {
+          "label": {
+            "en": "Official language",
+            "zh-TW": "官方語言"
+          },
+          "value": {
+            "en": "English",
+            "zh-TW": "英文"
+          }
+        }
+      ]
+    },
+    "themes": {
+      "title": {
+        "en": "Call for Papers · Six Thematic Areas",
+        "zh-TW": "徵稿主題 · 六大方向"
+      },
+      "items": [
+        {
+          "en": "Design Connecting People and Society",
+          "zh-TW": "連結人與社會的設計"
+        },
+        {
+          "en": "Post-Human-Centered Design Exploration",
+          "zh-TW": "超越人類中心的設計探索"
+        },
+        {
+          "en": "Interdisciplinary and Knowledge-System Design",
+          "zh-TW": "跨學科與知識系統的設計"
+        },
+        {
+          "en": "Design Linking Culture and Local Perspectives",
+          "zh-TW": "連結文化與在地觀點的設計"
+        },
+        {
+          "en": "Timeless Design Thinking",
+          "zh-TW": "穿越時代的設計思維"
+        },
+        {
+          "en": "Other Design-Related Topics",
+          "zh-TW": "其他設計相關領域"
+        }
+      ],
+      "note": {
+        "en": "Submissions are welcomed from scholars, doctoral and master's students, design practitioners, and related professionals.",
+        "zh-TW": "歡迎國內外學者、博士與碩士研究生、設計實務者及相關專業人士投稿。"
+      }
+    },
+    "dates": {
+      "title": {
+        "en": "Important Dates",
+        "zh-TW": "重要時程"
+      },
+      "items": [
+        {
+          "date": "2026-03-09",
+          "label": {
+            "en": "Abstract submission deadline (extended)",
+            "zh-TW": "論文摘要繳交截止（延長收件）"
+          }
+        },
+        {
+          "date": "2026-03-16",
+          "label": {
+            "en": "Review notification",
+            "zh-TW": "摘要審查結果通知"
+          }
+        },
+        {
+          "date": "2026-04-20",
+          "label": {
+            "en": "Full paper submission deadline",
+            "zh-TW": "論文全文繳交截止"
+          }
+        },
+        {
+          "date": "2026-05-04",
+          "label": {
+            "en": "Payment deadline",
+            "zh-TW": "費用繳交截止"
+          }
+        },
+        {
+          "date": "2026-06-15",
+          "label": {
+            "en": "Presentation slides and poster deadline",
+            "zh-TW": "發表簡報檔及海報檔繳交截止"
+          }
+        },
+        {
+          "date": "2026-07-03 / 04",
+          "label": {
+            "en": "Conference",
+            "zh-TW": "研討會"
+          }
+        },
+        {
+          "date": "2026-07-03 / 05",
+          "label": {
+            "en": "International integrated design workshop",
+            "zh-TW": "國際整合設計工作營"
+          }
+        }
+      ],
+      "note": {
+        "en": "Dates are reproduced from public event announcements. Please consult the organizer's latest notice for any subsequent updates.",
+        "zh-TW": "以上時程依公開活動公告整理；如有後續調整，請以主辦單位最新公告為準。"
+      }
+    },
+    "submission": {
+      "title": {
+        "en": "Submission Information",
+        "zh-TW": "投稿資訊"
+      },
+      "paragraphs": [
+        {
+          "en": "Submit an abstract through the official Google Form. After the abstract is accepted, authors should submit the full paper and presentation/poster files by the announced deadlines and complete the registration fee payment process.",
+          "zh-TW": "請透過官方 Google 表單提交論文摘要。摘要審查通過後，作者須依期限繳交論文全文、發表簡報／海報檔案，並完成報名繳費程序。"
+        },
+        {
+          "en": "Abstracts, full papers, and posters must be written in English. Oral presentations are planned as 10 minutes of presentation followed by 5 minutes for discussion and Q&A. Poster presentations will be displayed at the forum.",
+          "zh-TW": "摘要、全文及海報內容均須以英文撰寫。口頭發表規劃為 10 分鐘報告及 5 分鐘討論與問答；海報將於研討會現場展示。"
+        }
+      ],
+      "buttons": [
+        {
+          "label": {
+            "en": "Open abstract submission form",
+            "zh-TW": "開啟摘要投稿表單"
+          },
+          "href": "https://forms.gle/MphCJyUNFyecjuFT8",
+          "external": true
+        },
+        {
+          "label": {
+            "en": "Read official call for papers (PDF)",
+            "zh-TW": "閱讀官方徵稿辦法（PDF）"
+          },
+          "href": "assets/documents/call-for-papers.pdf",
+          "external": false,
+          "optional": true
+        }
+      ],
+      "fee": {
+        "en": "The public announcement lists a registration fee of NT$1,500 per accepted submission/paper; confirm the current payment instructions in the official notice.",
+        "zh-TW": "公開公告所列報名費為每篇審查通過論文新臺幣 1,500 元；實際繳費方式請以官方最新公告為準。"
+      }
+    },
+    "workshop": {
+      "title": {
+        "en": "International Integrated Design Workshop",
+        "zh-TW": "國際整合設計工作營"
+      },
+      "paragraphs": [
+        {
+          "en": "The workshop runs July 3–5, 2026, alongside the forum, encouraging cross-cultural teamwork and design practice. The event combines academic exchange with practice-oriented design activities.",
+          "zh-TW": "工作營於 2026 年 7 月 3–5 日舉行，與論壇活動相互結合，鼓勵跨文化團隊合作與設計實作，整合學術交流及實務導向的設計活動。"
+        }
+      ],
+      "image": "assets/images/workshop-placeholder.svg",
+      "imageAlt": {
+        "en": "Placeholder illustration for the international design workshop",
+        "zh-TW": "國際設計工作營示意圖"
+      }
+    },
+    "announcements": {
+      "title": {
+        "en": "Announcements & Resources",
+        "zh-TW": "公告與資源"
+      },
+      "items": [
+        {
+          "title": {
+            "en": "Official abstract submission form",
+            "zh-TW": "官方摘要投稿表單"
+          },
+          "description": {
+            "en": "Google Forms submission link published by the organizer.",
+            "zh-TW": "主辦單位公布的 Google 表單投稿連結。"
+          },
+          "href": "https://forms.gle/MphCJyUNFyecjuFT8",
+          "kind": "link"
+        },
+        {
+          "title": {
+            "en": "Call for papers and event information",
+            "zh-TW": "徵稿辦法與活動資訊"
+          },
+          "description": {
+            "en": "See the official university announcement for the call, dates, and submission requirements.",
+            "zh-TW": "請參閱學校官方公告中的徵稿辦法、時程及投稿規定。"
+          },
+          "href": "https://www.nstc.gov.tw/folksonomy/detail/24903f84-ee2e-44a8-8fea-dac26592a320?l=CH",
+          "kind": "link"
+        },
+        {
+          "title": {
+            "en": "Conference announcement (YunTech)",
+            "zh-TW": "雲科大官方活動公告"
+          },
+          "description": {
+            "en": "Official event description from National Yunlin University of Science and Technology.",
+            "zh-TW": "國立雲林科技大學官方活動說明。"
+          },
+          "href": "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-56/2019-04-10-08-06-58/item/13977-2026",
+          "kind": "link"
+        }
+      ]
+    },
+    "contact": {
+      "title": {
+        "en": "Contact & Organizers",
+        "zh-TW": "聯絡資訊與主辦單位"
+      },
+      "paragraphs": [
+        {
+          "en": "Organizer: Graduate School of Design, College of Design, National Yunlin University of Science and Technology.",
+          "zh-TW": "主辦單位：國立雲林科技大學設計學院設計學研究所。"
+        },
+        {
+          "en": "Guiding organization: National Science and Technology Council.",
+          "zh-TW": "指導單位：國家科學及技術委員會。"
+        },
+        {
+          "en": "Contact person reported in university announcements: Chang Chia-sheng. Office phone: +886-5-534-2601 ext. 6041.",
+          "zh-TW": "校方公告聯絡人：張嘉升；聯絡電話：05-534-2601 分機 6041。"
+        }
+      ]
+    }
+  },
+  "socialLinks": [],
+  "sources": [
+    {
+      "label": "YunTech official event announcement",
+      "url": "https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-56/2019-04-10-08-06-58/item/13977-2026"
+    },
+    {
+      "label": "National Science and Technology Council event announcement",
+      "url": "https://www.nstc.gov.tw/folksonomy/detail/24903f84-ee2e-44a8-8fea-dac26592a320?l=CH"
+    },
+    {
+      "label": "YunTech English news announcement",
+      "url": "https://eng.yuntech.edu.tw/index.php/2019-04-10-08-06-20/item/13617-design-beyond-borders-13th-international-design-research-forum-integrated-design-workshop-idsfc-2026"
+    }
+  ]
+}
