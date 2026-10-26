@@ -1,112 +1,109 @@
-# IDSFC 2026 — Static Website
+# IDSFC 2026 靜態網站
 
-A no-build, static HTML/CSS/JavaScript recreation scaffold for IDSFC 2026, designed for GitHub Pages. The site reads its visible content from `config/site.json`; images and documents live under `assets/`.
+換圖片時，做兩件事：把圖檔放到對應資料夾，再把 `config/site.json` 裡的路徑改成那個檔名。頁面上看到的圖，都是跟著這份設定走。
 
-> **Content and visual fidelity note:** The original Wix site could not be fully inspected or downloaded in this execution environment. This implementation uses public event details published by YunTech and Taiwan's National Science and Technology Council. The generated hero artwork and logo are placeholders, not original IDSFC branding. Before treating this as a faithful 1:1 reproduction, compare it against the live Wix site and replace placeholders with assets you have permission to reuse.
-
-## Directory structure
+## 整體結構
 
 ```text
-.
-├── index.html
+頁面由上到下
+│
+├── 瀏覽器分頁小圖（favicon）
+├── 頁首 Logo
+├── 首頁主視覺（Hero 背景）
+├── 工作營圖片
+└── 其餘文字、按鈕、日期、公告    ← 改 config/site.json 的文字，不是圖片
+```
+
+```text
+idsfc2026-static/
+├── index.html                         分頁小圖的路徑寫在這裡
 ├── config/
-│   └── site.json            # Centralized text, links, images, dates and contact info
-├── assets/
-│   ├── css/styles.css
-│   ├── js/app.js
-│   ├── images/              # Hero and workshop images (placeholders included)
-│   ├── logos/               # Logo (placeholder included)
-│   ├── documents/           # Put downloadable PDFs and other files here
-│   └── icons/
-└── .github/workflows/pages.yml
+│   └── site.json                      Logo、主視覺、工作營圖的路徑寫在這裡
+└── assets/
+    ├── logos/                         放 Logo、分頁小圖
+    │   └── idsfc-logo.svg             目前使用的 Logo
+    ├── images/                        放主視覺、工作營照片
+    │   ├── hero-placeholder.svg       目前使用的首頁主視覺
+    │   └── workshop-placeholder.svg   目前使用的工作營圖片
+    ├── documents/                     放 PDF 等可下載檔案
+    ├── css/
+    ├── js/
+    └── icons/
 ```
 
-## Local preview
+## 圖片對照
 
-Do not open `index.html` directly with `file://`, because browsers may block `fetch()` for the JSON configuration. From the project directory run one of:
+| 頁面上的位置 | 圖檔放這裡 | 要改的設定 |
+| --- | --- | --- |
+| 頁首 Logo | `assets/logos/` | `config/site.json` → `site.logo` |
+| 瀏覽器分頁小圖 | `assets/logos/` | `index.html` 第 9 行 `href` |
+| 首頁主視覺 | `assets/images/` | `config/site.json` → `site.heroImage` |
+| 工作營圖片 | `assets/images/` | `config/site.json` → `sections.workshop.image` |
 
-```bash
-python -m http.server 8000
-```
+路徑一律從網站根目錄寫起，例如 `assets/images/hero.jpg`。不要寫成 `/assets/...`，也不要寫電腦上的完整路徑。
 
-Then open `http://localhost:8000`.
+## 換某一張圖
 
-Or use the Live Server extension in VS Code.
+1. 把新圖放進上表的資料夾。檔名用英文，例如 `hero.jpg`、`logo.png`。
+2. 打開上表「要改的設定」，把路徑改成新檔名。
+3. 檔名如果跟現在完全一樣，直接覆蓋原檔即可，不必改設定。
 
-## Deploy to GitHub Pages
+### 頁首 Logo
 
-1. Create a GitHub repository and upload/commit the contents of this folder to the repository's `main` branch.
-2. Open **Settings → Pages** in the repository.
-3. Set the build/deployment source to **GitHub Actions**.
-4. Push to `main`. The workflow in `.github/workflows/pages.yml` deploys the repository root as a static site.
-5. Check the workflow run and open the published Pages URL.
-
-The app resolves the JSON configuration relative to the JavaScript file, and resource paths are relative rather than rooted at `/`, so it supports project URLs such as `https://USERNAME.github.io/REPOSITORY/`.
-
-## Common updates
-
-### Replace the homepage hero artwork
-
-1. Add the licensed image to `assets/images/`, for example `conference-hero.jpg`.
-2. In `config/site.json`, change `site.heroImage` to `assets/images/conference-hero.jpg`. The renderer reads this setting automatically. Do not remove attribution required by the asset license.
-
-### Replace the logo
-
-Place the replacement logo under `assets/logos/` and update `site.logo` in `config/site.json`. Keep the image aspect ratio square where possible.
-
-### Change the submission button URL
-
-Edit `sections.submission.buttons` in `config/site.json`, then commit and push the change. For example:
+圖檔放 `assets/logos/`。在 `config/site.json` 改 `site.logo`：
 
 ```json
-{
-  "label": {
-    "en": "Open abstract submission form",
-    "zh-TW": "開啟摘要投稿表單"
-  },
-  "href": "https://forms.gle/MphCJyUNFyecjuFT8",
-  "external": true
-}
+"logo": "assets/logos/idsfc-logo.png"
 ```
 
-### Add a PDF document
+Logo 以正方形為宜。頁首會把它顯示成約 44×44。
 
-1. Copy the PDF into `assets/documents/`, e.g. `author-guidelines.pdf`.
-2. Add an item under `sections.announcements.items` with `"href": "assets/documents/author-guidelines.pdf"`.
-3. Commit and push. The link will open the PDF in the browser where supported.
+### 瀏覽器分頁小圖
 
-### Update an announcement
+圖檔也放 `assets/logos/`。這張不讀 `site.json`，要改 `index.html`：
 
-Edit `sections.announcements.items` in `config/site.json`. Each item supports `title`, `description`, and `href`; `en` and `zh-TW` values control language display.
+```html
+<link rel="icon" href="assets/logos/idsfc-logo.png" type="image/png">
+```
 
-### Update bilingual text
+若沿用 `assets/logos/idsfc-logo.svg` 這個檔名，覆蓋原檔即可，不用改這一行。`type` 要跟副檔名一致：SVG 用 `image/svg+xml`，PNG 用 `image/png`。
 
-For translatable fields, edit both `"en"` and `"zh-TW"` values. The language toggle saves the selected language in local storage. For items that are not yet translated, English is used as the fallback.
+### 首頁主視覺
 
-### Publish an update
+圖檔放 `assets/images/`。在 `config/site.json` 改 `site.heroImage`：
+
+```json
+"heroImage": "assets/images/hero.jpg"
+```
+
+這張是首屏背景，會裁成鋪滿。橫向照片比較合適。
+
+### 工作營圖片
+
+圖檔放 `assets/images/`。在 `config/site.json` 改 `sections.workshop.image`：
+
+```json
+"image": "assets/images/workshop.jpg"
+```
+
+旁邊的說明文字改同一段的 `imageAlt`，`en` 與 `zh-TW` 都要寫。
+
+## 本機預覽
+
+不要用檔案總管直接打開 `index.html`。在專案根目錄執行：
+
+```bash
+python3 -m http.server 8000
+```
+
+然後打開 `http://localhost:8000`。換過圖之後重新整理頁面。
+
+## 發佈更新
 
 ```bash
 git add .
-git commit -m "Update IDSFC website content"
+git commit -m "Update IDSFC website images"
 git push origin main
 ```
 
-GitHub Actions deploys the updated static files automatically.
-
-## Content source notes
-
-The following public sources were used to seed event information:
-
-- YunTech official event announcement: https://www.yuntech.edu.tw/index.php/2019-04-10-08-06-20/2019-04-10-08-06-21/2019-04-10-08-06-56/2019-04-10-08-06-58/item/13977-2026
-- National Science and Technology Council announcement: https://www.nstc.gov.tw/folksonomy/detail/24903f84-ee2e-44a8-8fea-dac26592a320?l=CH
-- YunTech English announcement: https://eng.yuntech.edu.tw/index.php/2019-04-10-08-06-20/item/13617-design-beyond-borders-13th-international-design-research-forum-integrated-design-workshop-idsfc-2026
-- Original Wix website: https://idsfc2026.wixsite.com/home
-
-## Known gaps / manual follow-up required
-
-- Original Wix page-by-page layout, exact typography, colors, mobile breakpoints, and every link could not be verified here.
-- Original Wix images, logos, PDFs, workshop photos, and other media have not been downloaded. The included SVG illustrations are explicit placeholders.
-- A public announcement links to the abstract Google Form; the site should be checked to confirm whether this is still the intended active submission endpoint.
-- A `call-for-papers.pdf` link is optional and will only work after you place the actual authorized PDF in `assets/documents/`.
-- No browser automation or live GitHub Pages deployment was available during this run. Test the deployed URL and use browser devtools to verify all assets and links before announcing the site as complete.
-- This is a static website. Any registration, submission, or payment flow remains on the linked external service; this website does not collect or store submissions.
+推上 `main` 之後，GitHub Actions 會把整站發佈到 GitHub Pages。
