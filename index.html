@@ -1,71 +1,382 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#173e3a">
-  <meta name="description" content="IDSFC 2026 — Design Beyond Borders. International design research forum and integrated design workshop.">
-  <title>IDSFC 2026 — Design Beyond Borders</title>
-  <link rel="icon" href="assets/logos/idsfc-logo.svg" type="image/svg+xml">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>2027 IDSFC · Interwoven Intelligence</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="header-inner">
-      <a class="brand" href="#top" aria-label="IDSFC 2026 home">
-        <img id="site-logo" src="assets/logos/idsfc-logo.svg" alt="IDSFC 2026 logo">
-        <span><strong>IDSFC 2026</strong><small>Design Beyond Borders</small></span>
-      </a>
-      <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-      <nav id="primary-nav" aria-label="Main navigation"><ul id="nav-list"></ul></nav>
-      <button class="language-toggle" id="language-toggle" type="button" aria-label="Switch language">中文</button>
+  <div class="cur" id="cur"></div>
+  <div id="bar"></div>
+
+  <nav id="nav">
+    <div class="wrap">
+      <a href="#top" class="logo hv">2027 IDSFC</a>
+      <ul>
+        <li><a class="hv" href="#about">About</a></li>
+        <li><a class="hv" href="#theme">Theme</a></li>
+        <li><a class="hv" href="#topics">Topics</a></li>
+        <li><a class="hv" href="#speakers">Speakers</a></li>
+        <li><a class="hv" href="#program">Program</a></li>
+        <li><a class="hv" href="#info">Venue</a></li>
+      </ul>
+      <a href="#submit" class="pill hv" style="padding:9px 22px;font-size:14px">Submission</a>
     </div>
-  </header>
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-art" aria-hidden="true"></div>
-      <div class="hero-inner">
-        <p class="eyebrow" data-i18n="hero.eyebrow"></p>
-        <h1 data-i18n="hero.title"></h1>
-        <p class="hero-subtitle" data-i18n="hero.subtitle"></p>
-        <p class="hero-body" data-i18n="hero.body"></p>
-        <div class="hero-actions" id="hero-actions"></div>
-        <div class="hero-meta"><span>YUNTECH · TAIWAN</span><span>03 — 05 JULY 2026</span></div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="kv"><img id="kvi" alt="" src="assets/images/background.jpg"></div>
+    <div class="fl" data-s="40" style="right:12%;top:18%;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff1b0,var(--gold))"></div>
+    <div class="fl" data-s="-30" style="right:5%;top:46%;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#bfe6e2,var(--teal))"></div>
+    <div class="fl" data-s="55" style="left:8%;top:30%;width:26px;height:26px;background:var(--gold)"></div>
+    <div class="fl" data-s="-50" style="left:44%;top:22%;width:30px;height:30px;background:var(--lime)"></div>
+    <div class="wrap">
+      <p class="eyebrow">THE 14TH INTERNATIONAL DESIGN STUDY FORUM AND CONFERENCE</p>
+      <p class="yr">2027 IDSFC</p>
+      <h1 class="sp" aria-label="Interwoven Intelligence">Interwoven<br>Intelligence</h1>
+      <p style="font-size:clamp(22px,3vw,34px);margin:0 0 22px;font-weight:300">06.26 sat. → 06.27 sun.</p>
+      <p class="lab" style="margin-bottom:8px">Abstract deadline · Feb 22, 2027</p>
+      <div class="cd" id="cd">
+        <div><b>–</b><small>DAYS</small></div>
+        <div><b>–</b><small>HOURS</small></div>
+        <div><b>–</b><small>MIN</small></div>
+        <div><b>–</b><small>SEC</small></div>
       </div>
-    </section>
-    <div class="ticker" aria-label="Conference theme"><span>DESIGN BEYOND BORDERS</span><span>DESIGN BEYOND BORDERS</span><span>DESIGN BEYOND BORDERS</span></div>
-    <section class="section about-section" id="about">
-      <div class="section-heading"><p class="eyebrow">01 / INTRODUCTION</p><h2 data-section-title="about"></h2></div>
-      <div class="about-grid"><div id="about-copy" class="rich-copy"></div><div id="facts" class="facts-grid"></div></div>
-    </section>
-    <section class="section themes-section" id="themes">
-      <div class="section-heading"><p class="eyebrow">02 / CALL FOR PAPERS</p><h2 data-section-title="themes"></h2></div>
-      <div id="themes-grid" class="themes-grid"></div><p id="themes-note" class="section-note"></p>
-    </section>
-    <section class="section dates-section" id="dates">
-      <div class="section-heading"><p class="eyebrow">03 / MARK YOUR CALENDAR</p><h2 data-section-title="dates"></h2></div>
-      <div id="dates-list" class="dates-list"></div><p id="dates-note" class="section-note"></p>
-    </section>
-    <section class="section submission-section" id="submission">
-      <div class="submission-copy"><p class="eyebrow">04 / PARTICIPATE</p><h2 data-section-title="submission"></h2><div id="submission-copy" class="rich-copy"></div><p id="submission-fee" class="fee-note"></p><div id="submission-actions" class="hero-actions"></div></div>
-      <div class="submission-stamp" aria-hidden="true"><span>IDSFC</span><strong>2026</strong><small>CALL FOR PAPERS</small></div>
-    </section>
-    <section class="section workshop-section" id="workshop">
-      <div class="section-heading"><p class="eyebrow">05 / CO-CREATE</p><h2 data-section-title="workshop"></h2></div>
-      <div class="workshop-grid"><div id="workshop-copy" class="rich-copy"></div><img id="workshop-image" src="assets/images/workshop-placeholder.svg" alt=""></div>
-    </section>
-    <section class="section announcements-section" id="announcements">
-      <div class="section-heading"><p class="eyebrow">06 / UPDATES</p><h2 data-section-title="announcements"></h2></div>
-      <div id="announcements-list" class="resource-list"></div>
-    </section>
-    <section class="section contact-section" id="contact">
-      <div class="contact-main"><p class="eyebrow">07 / GET IN TOUCH</p><h2 data-section-title="contact"></h2><div id="contact-copy" class="rich-copy"></div></div>
-      <aside class="contact-card"><span class="card-label">CONTACT EMAIL</span><a id="contact-email" href="mailto:idsfc2026@gmail.com">idsfc2026@gmail.com</a><span class="card-label">PHONE</span><p id="contact-phone"></p></aside>
-    </section>
-  </main>
-  <footer class="site-footer"><div><strong id="footer-name">IDSFC 2026</strong><p id="footer-copy"></p></div><div class="footer-links" id="footer-links"></div><a class="back-top" href="#top">BACK TO TOP ↑</a></footer>
-  <noscript><p class="noscript">This website requires JavaScript to load its centralized content configuration.</p></noscript>
+      <a href="#submit" class="pill hv">Submission info →</a>
+    </div>
+    <div class="mq" aria-hidden="true"><div id="mq"></div></div>
+  </header>
+
+  <section id="about" class="lime blk">
+    <div class="wrap">
+      <p class="lab">About</p>
+      <h2 class="rv">Where design, technology and people intertwine.</h2>
+      <p class="big rv">Since 2014, the Graduate School of Design at NYUST has hosted IDSFC as a platform for design research and international exchange. This year, Interwoven Intelligence asks how human sensibility, computation, local knowledge and cross-disciplinary expertise can be connected, translated and woven together through design.</p>
+      <div class="stats rv">
+        <div class="stat"><b data-n="14">0</b><span>th edition since 2014</span></div>
+        <div class="stat"><b data-n="3">0</b><span>international keynote talks</span></div>
+        <div class="stat"><b data-n="6">0</b><span>topics to explore</span></div>
+        <div class="stat"><b data-n="2">0</b><span>days, all in English</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="theme">
+    <div class="wrap">
+      <p class="lab">Theme</p>
+      <h2 class="rv">Why Interwoven Intelligence?</h2>
+      <p class="big rv" style="margin-bottom:36px">Facing AI and algorithmic development, ecological transition, the loss of local culture and global cultural convergence, design must move beyond single technology- or tool-oriented thinking and rethink the relationships among people, technology, culture and environment.</p>
+      <div class="ib rv" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+        <div>
+          <h4>Intelligence</h4>
+          <p>Intelligence here is more than AI. It spans human sensibility, computation, local knowledge and cross-disciplinary expertise, and design can expand what we mean by intelligence.</p>
+        </div>
+        <div>
+          <h4>Interwoven</h4>
+          <p>Interwoven stands for open connection and dialogue among different knowledge, cultures and ways of thinking, and for designers who cross disciplinary boundaries to bring diverse perspectives together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="topics" class="teal blk">
+    <div class="wrap">
+      <p class="lab">Call for Papers</p>
+      <h2 class="rv">Six ways to join the weave.</h2>
+      <div class="tl" id="tl"></div>
+    </div>
+  </section>
+
+  <section id="speakers">
+    <div class="wrap">
+      <p class="lab">Keynote Speakers</p>
+      <h2 class="rv">Three perspectives, to be announced.</h2>
+      <div class="spk rv">
+        <div class="card hv">
+          <div>
+            <div class="f" style="background:linear-gradient(#fff27a,#fcd27a)">
+              <h3>To Be Announced</h3>
+              <p>Keynote Speaker 1</p>
+            </div>
+            <div class="b">
+              <h3>Human &amp; ethics</h3>
+              <p>Human-centered AI, digital well-being and ethical design.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card hv">
+          <div>
+            <div class="f" style="background:linear-gradient(#bfe6e2,var(--teal))">
+              <h3>To Be Announced</h3>
+              <p>Keynote Speaker 2</p>
+            </div>
+            <div class="b">
+              <h3>Society &amp; culture</h3>
+              <p>Social design, design education and cross-sector collaboration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card hv">
+          <div>
+            <div class="f" style="background:linear-gradient(#eef5cf,#c9dd8c)">
+              <h3>To Be Announced</h3>
+              <p>Keynote Speaker 3</p>
+            </div>
+            <div class="b">
+              <h3>Technology &amp; interaction</h3>
+              <p>Interaction design, immersive experiences and digital culture.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="rv" style="margin-top:22px;color:var(--muted);font-size:14px">Keynote speakers will be announced once confirmed.</p>
+    </div>
+  </section>
+
+  <section id="program" class="gold blk">
+    <div class="wrap">
+      <p class="lab">Program</p>
+      <h2 class="rv">Build your own two days.</h2>
+      <div class="chips" id="ch">
+        <button class="chip on" data-t="all">All</button>
+        <button class="chip" data-t="Sat">Sat · Jun 26</button>
+        <button class="chip" data-t="Sun">Sun · Jun 27</button>
+        <button class="chip" data-t="Keynote">Keynotes</button>
+        <button class="chip" data-t="Paper">Papers</button>
+      </div>
+      <div id="ss"></div>
+      <div class="my" id="my">Tap ☆ to save sessions to your personal schedule.</div>
+      <p style="font-size:14px;margin-top:16px;opacity:.8">* Schedule from the current plan and subject to change.</p>
+    </div>
+  </section>
+
+  <section id="submit">
+    <div class="wrap" style="max-width:900px">
+      <p class="lab">Submit</p>
+      <h2 class="rv">Submissions are not yet open.</h2>
+      <span class="nt">NOT YET OPEN</span>
+      <p class="big rv" style="font-size:clamp(20px,2.6vw,28px)">The online submission system has not opened yet. Submission details, templates and the entry point will be announced on the official website.</p>
+      <div class="tm">
+        <div><b>Feb 22, 2027</b><span>Abstract deadline (Mon)</span></div>
+        <div><b>Mar 15, 2027</b><span>Abstract notification (Mon)</span></div>
+        <div><b>Apr 19, 2027</b><span>Fee payment deadline (Mon)</span></div>
+        <div><b>May 10, 2027</b><span>Full paper deadline (Mon)</span></div>
+        <div><b>Jun 26–27, 2027</b><span>Conference (Sat–Sun)</span></div>
+      </div>
+      <div class="ib">
+        <div>
+          <h4>How to submit</h4>
+          <p>Submit an abstract through the online system. After acceptance, you will be asked to upload your full paper and poster file and to pay the registration fee.</p>
+        </div>
+        <div>
+          <h4>Language</h4>
+          <p>All abstracts, full papers and posters must be written in English, and oral presentations are delivered entirely in English.</p>
+        </div>
+        <div>
+          <h4>Full paper</h4>
+          <p>A4 format, limited to 4, 6, 8 or 10 pages. Accepted full papers are published in the proceedings.</p>
+        </div>
+        <div>
+          <h4>Presentation and fee</h4>
+          <p>Oral presentation: 10 minutes of presentation plus 5 minutes of Q&amp;A. The registration fee is tentatively NT$2,000.</p>
+        </div>
+        <div>
+          <h4>Publication</h4>
+          <p>Electronic proceedings, with an ISBN to be applied for and indexing planned in Airiti Library. Award-winning papers will be recommended to the Journal of Design Study.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="lime blk">
+    <div class="wrap">
+      <p class="lab">Venue &amp; Contact</p>
+      <h2 class="rv">Find us in Yunlin.</h2>
+      <div class="two2 rv">
+        <div>
+          <h4>Venue</h4>
+          <p>National Yunlin University of Science and Technology<br>Design Building 1 (Room B01, Audio-Visual Classroom) and Design Building 2<br>No. 123, Sec. 3, University Rd., Douliu, Yunlin 64002, Taiwan</p>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>Graduate School of Design, NYUST<br>Email: IDSFC14th@gmail.com<br>Tel: +886-5-534-2601 ext. 6041, 6042<br>Facebook page: 2027 IDSFC國際設計研究論壇暨研討會</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div><b>2027 IDSFC</b><br>Interwoven Intelligence<br>June 26–27, 2027</div>
+      <div><b>Advisory Organization</b><br>National Science and Technology Council<br>Ministry of Education Higher Education Sprout Project</div>
+      <div><b>Organizer</b><br>Graduate School of Design<br>National Yunlin University of Science and Technology</div>
+    </div>
+  </footer>
+
+  <script>
+    var $ = function (s, c) { return (c || document).querySelector(s); };
+    var $$ = function (s, c) { return [].slice.call((c || document).querySelectorAll(s)); };
+
+    var T = [
+      ["Human-Centered Design for Social Well-being", "Health, well-being, inclusion and the social impact of design."],
+      ["Exploring Intelligent Technologies and Interactive Innovation", "Artificial intelligence, interactive technology, virtual–physical integration and technology art."],
+      ["Interdisciplinary Knowledge and Collaborative Design Integration", "Collaboration between design and education, healthcare, engineering and other fields."],
+      ["Local Culture and Community Co-creation Practices", "Local wisdom, cultural translation, community participation and social innovation."],
+      ["Design Thinking Across Time and Futures", "Design history, design theory, future trends and systems transformation."],
+      ["Other Design Areas", "Other design-related fields that fit the spirit of the conference."]
+    ];
+
+    var S = [
+      ["Sat", "09:00–09:30", "Registration", "Check-in", "Other"],
+      ["Sat", "09:30–10:00", "Opening Ceremony", "Opening remarks and addresses by officials and guests", "Other"],
+      ["Sat", "10:00–12:00", "Keynote 1", "Speaker to be announced", "Keynote"],
+      ["Sat", "12:00–13:30", "Lunch", "", "Other"],
+      ["Sat", "13:30–15:30", "Parallel Sessions I", "Rooms A, B, C · paper presentations with chairs and discussants", "Paper"],
+      ["Sat", "15:30–16:00", "Tea Break", "Networking", "Other"],
+      ["Sat", "16:00–18:00", "Parallel Sessions II", "Rooms A, B, C · paper presentations with chairs and discussants", "Paper"],
+      ["Sat", "18:00–20:00", "Academic Gala Dinner", "International speakers, reviewers, presenters, staff, faculty and students", "Other"],
+      ["Sun", "09:30–10:00", "Registration", "Check-in", "Other"],
+      ["Sun", "10:00–12:00", "Keynote 2", "Speaker to be announced", "Keynote"],
+      ["Sun", "12:00–13:30", "Lunch", "", "Other"],
+      ["Sun", "13:30–15:30", "Parallel Sessions III", "Rooms A, B, C · paper presentations with chairs and discussants", "Paper"],
+      ["Sun", "15:30–15:40", "Tea Break", "Networking", "Other"],
+      ["Sun", "15:40–17:40", "Keynote 3", "Speaker to be announced", "Keynote"],
+      ["Sun", "17:40–18:00", "Closing and Best Paper Award", "Sharing, farewell and award ceremony", "Other"],
+      ["Sun", "18:00–19:00", "Farewell", "", "Other"]
+    ];
+
+    $$(".sp").forEach(function (el) {
+      var h = "";
+      el.childNodes.forEach(function (n) {
+        h += n.nodeType == 3
+          ? n.textContent.split("").map(function (c) { return "<span>" + c + "</span>"; }).join("")
+          : "<br>";
+      });
+      el.innerHTML = h;
+    });
+
+    var m = T.map(function (t) { return t[0]; }).join("<i>✦</i>");
+    $("#mq").innerHTML = (m + "<i>✦</i>").repeat(2);
+
+    $("#tl").innerHTML = T.map(function (t, i) {
+      return '<div class="tr"><button class="hv"><em>0' + (i + 1) + "</em><h3>" + t[0] + '</h3><span class="pl">+</span></button><div class="bd"><p>' + t[1] + "</p></div></div>";
+    }).join("");
+
+    $$(".tr > button").forEach(function (b) {
+      b.onclick = function () {
+        var r = b.parentNode;
+        var o = r.classList.toggle("open");
+        var d = $(".bd", r);
+        d.style.maxHeight = o ? d.scrollHeight + "px" : 0;
+      };
+    });
+
+    var saved = {};
+    $("#ss").innerHTML = S.map(function (s, i) {
+      return '<div class="ss" data-d="' + s[0] + '" data-k="' + s[4] + '"><time>' + s[1] + "</time><div><h4>" + s[2] + "</h4><p>" + s[3] + '</p></div><button class="star hv" data-i="' + i + '" aria-label="Save">☆</button></div>';
+    }).join("");
+
+    function my() {
+      var k = Object.keys(saved).sort();
+      $("#my").innerHTML = k.length
+        ? "<b>My schedule (" + k.length + ")</b><br>" + k.map(function (i) { return S[i][0] + " " + S[i][1] + " · " + S[i][2]; }).join("<br>")
+        : "Tap ☆ to save sessions to your personal schedule.";
+    }
+
+    $$(".star").forEach(function (b) {
+      b.onclick = function () {
+        var i = b.dataset.i;
+        if (saved[i]) {
+          delete saved[i];
+          b.classList.remove("on");
+          b.textContent = "☆";
+        } else {
+          saved[i] = 1;
+          b.classList.add("on");
+          b.textContent = "★";
+        }
+        my();
+      };
+    });
+
+    $$(".chip").forEach(function (c) {
+      c.onclick = function () {
+        $$(".chip").forEach(function (x) { x.classList.remove("on"); });
+        c.classList.add("on");
+        var t = c.dataset.t;
+        $$(".ss").forEach(function (r) {
+          r.classList.toggle("hd", !(t == "all" || r.dataset.d == t || r.dataset.k == t));
+        });
+      };
+    });
+
+    $$(".card").forEach(function (c) {
+      c.addEventListener("click", function () { c.classList.toggle("fl2"); });
+    });
+
+    function tick() {
+      var d = new Date("2027-02-22T23:59:59+08:00") - new Date();
+      var v = d < 0
+        ? [0, 0, 0, 0]
+        : [Math.floor(d / 864e5), Math.floor(d / 36e5) % 24, Math.floor(d / 6e4) % 60, Math.floor(d / 1e3) % 60];
+      $$("#cd b").forEach(function (b, i) {
+        b.textContent = String(v[i]).padStart(2, "0");
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+
+    var cur = $("#cur"), cx = 0, cy = 0, tx = 0, ty = 0;
+    document.addEventListener("mousemove", function (e) {
+      tx = e.clientX;
+      ty = e.clientY;
+      var x = e.clientX / innerWidth - 0.5;
+      var y = e.clientY / innerHeight - 0.5;
+      $("#kvi").style.transform = "translate(" + (-x * 30) + "px," + (-y * 20) + "px)";
+      $$(".fl").forEach(function (f) {
+        var s = +f.dataset.s;
+        f.style.transform = "translate(" + x * s + "px," + y * s + "px)";
+      });
+    });
+    (function loop() {
+      cx += (tx - cx) * 0.2;
+      cy += (ty - cy) * 0.2;
+      cur.style.left = cx + "px";
+      cur.style.top = cy + "px";
+      requestAnimationFrame(loop);
+    })();
+    document.addEventListener("mouseover", function (e) {
+      cur.classList.toggle("big", !!(e.target.closest && e.target.closest(".hv,button,a,.sp")));
+    });
+
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add("in");
+        $$("[data-n]", e.target).forEach(function (b) {
+          var n = +b.dataset.n, i = 0;
+          var t = setInterval(function () {
+            b.textContent = ++i;
+            if (i >= n) clearInterval(t);
+          }, 700 / n);
+        });
+        io.unobserve(e.target);
+      });
+    }, { threshold: 0.2 });
+    $$(".rv").forEach(function (r) { io.observe(r); });
+
+    addEventListener("scroll", function () {
+      var h = document.documentElement;
+      $("#bar").style.width = (scrollY / (h.scrollHeight - innerHeight) * 100) + "%";
+      $("#nav").classList.toggle("on", scrollY > 40);
+      $$("nav li a").forEach(function (a) {
+        var s = $(a.getAttribute("href"));
+        var r = s.getBoundingClientRect();
+        a.classList.toggle("act", r.top < innerHeight * 0.4 && r.bottom > innerHeight * 0.4);
+      });
+    });
+  </script>
 </body>
 </html>
